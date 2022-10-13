@@ -1,6 +1,6 @@
 # Linux-Command-All-in-One-
 <h6> Basic command start </h6>
-date  // to display the current date
+date  // to display the current date \n
 who  // to provide details about currently loggined user
 whoami //to display the currently logined user name
 man //to provide manual
