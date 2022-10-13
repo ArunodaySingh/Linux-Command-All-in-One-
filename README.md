@@ -135,6 +135,113 @@ ls -l filename<br>
 then ,<br>
 chown new_user_name filename<br>
 
+# Change the group of a file<br>
+chown :user1 filename<br>
+
+#change the owner and group of a file<br>
+chown newowner:newgroup filename<br>
+
+Note When the chown command was issued on symbolic link to change the owner as well as the group then its the referent of the symbolic link ie ‘tmpfile’ whose owner and group got changed. This is the default behavior of the chown command. Also, there exists a flag ‘–dereference’ for the same.<br>
+# chown ownwename:groupname sym_file<br>
+
+<h6>How to change a root password </h6><br>
+step1 => double click then click e then go on kernal click enter then  space 1 then click b run commad passwd done<br>
+
+<h6>Display Hard links </h6><br>
+ln myfile linkname<br>
+check inode number should be same using command ls -li <br>
+=> hard-links cannot point to directories<br>
+
+<h6>Display Soft Links </h6><br>
+ln -s mufile softfile<br>
+check ls -li check link count is increase by  2<br>
+
+<h6>Runlevel</h6><br>
+1. Change the behivour of the os<br>
+2. runlevel 0 shoutdown<br>
+3. runlevel 1 single user for root<br>
+4. runlevel 2 multiple user no network<br>
+5. runlevel 3 use for server side network but no gui<br>
+6. runlevel 4 reserved for scientific purpose<br>
+7. rulevel 5 workstation and normal PC<br>
+8. runlevel 6 reboot<br>
+
+<h6> file and directory permission </h6>
+1. 4 read<br>
+2. 2 write<br>
+3. 1 execute<br>
+
+chmod 777 filename //Numerical notation<br>
+1. for owner<br>
+2. for group<br>
+3. for others<br>
+
+chmod u+rwx,g+r,o+w filename // Symbolic notation<br>
+chmod u=rw,g=rwz,o=r filename //override previous notation<br>
+
+<h6>find command </h6><br>
+The find command helps us to find a particular file within a directory.<br>
+find . -name "*.txt" <br>
+
+<h6>grep command </h6><br>
+The 'grep' command stands for "global regular expression print". grep command filters the content of a file which makes our search easy.
+grep <searchWord> <file name>  <br>
+
+ <h6> locatecommand </h6><br>
+The locate command and find command is used to search a file by name. But, the difference between both commands is that locate command is a background process and searches the file in the database whereas, find command searches in the filesystem. The locate command is much faster than find command.<br>
+
+ locate <file name><br>
+ 
+ <h6> vim editor </h6><br>
+ 
+ vim has three modes<br>
+ 1. command<br>
+ 2. Input<br>
+ 3. Last Line<br>
+ 
+ vi editor can be used as a gui mode as well as cui mode.<br>
+ 
+<h6> Tee command </h6><br>
+ 
+The tee command, used with a pipe, reads standard input, then writes the output of a program to standard output and simultaneously copies it into the specified file or files. Use the tee command to view your output immediately and at the same time, store it for future use.<br>
+ 
+tee -a filename //for append<br>
+-h // user readable form<br>
+tee --help // to show all options<br>
+
+ <h6> Some process command </h6><br><br>
+ Simplest way to start a background process is to add an ampersand(&) at end of the command.<br>
+ kill => command use to kill the process<br>
+ ps -f => give more details about the process<br>
+ top => display top process.<br>
+ free => display information about free & used memory on the system.<br>
+ df => report filesystem disk space usage<br>
+ 
+ <h6> Tar command </h6><br>
+ 
+ It's used to compressed or decompressed file<br>
+ -c compress<br>
+ -v verbose<br>
+ -f filename<br>
+ -x extract<br>
+ 
+ tar -cvf Archieve_test.tar /home/utilizers<br>
+ 
+ 
+ 
+ <h6> Word Count </h6><br>
+ wc file 2<br>
+ 4 6 29 file2<br>
+ 4 no. of lines<br>
+ 6 no. of words<br>
+ 29 no. of char<br>
+ 
+ 
+ 
+
+
+
+
 
 
 
