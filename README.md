@@ -1,70 +1,69 @@
 # Linux-Command-All-in-One-
 <h6> Basic command start </h6>
-date  // to display the current date \n
-who  // to provide details about currently loggined user
-whoami //to display the currently logined user name
-man //to provide manual
-clear // to clear commands from terminal
-pwd  // to show present working directory
-cal   cal 2028  cal 11 2023  // to display calendar
-uptime  //uptime of system
-df  //show disk usage
-du  //show directory space usage
-free  //show memory and swap usage
-passwd / to set/reset password
-ls   ls -a   ls -l   ls -al   //to show content of files and directories
-cat>hello.txt //to create a text file
-cat hello.txt //to view content of file
-cat>hello.txt //to rewrite into a file
-cat>>hello.txt //to append the file
-cat file1.txt file2.txt > file3.txt   //to add content of two files to single
-ctrl +d //to save file content
-touch //to create empty file
-rm //to remove file or directory
-cd     cd ..    //to change directory
-grep pattern filename   //to search for a pattern in a file it's give a 
-gedit   //to edit the file graphically
-mkdir  //to create a directory
-rmdir  //to del empty dir
-rm -rf dirname  //to del dir w/c is not empty
-cp     //cp source  destination      to copy a file
-mv    //to move the file from one location to another
-ps // currently working process
-top // all running process
-useradd    adduser    //to add new user
-userdel      // to del user
-redhat-config-network      //to open network configuration manager
-ifconfig  //to check network details
-ping id address
-service network restart
-more filename // view the content of the text file,
-head filename  //first 10 lines
-tail filename  //last 10 lines
+date  // to display the current date <br>
+who  // to provide details about currently loggined user <br>
+whoami //to display the currently logined user name <br>
+man //to provide manual<br>
+clear // to clear commands from terminal<br>
+pwd  // to show present working directory<br>
+cal   cal 2028  cal 11 2023  // to display calendar<br>
+uptime  //uptime of system<br> 
+df  //show disk usage<br>
+du  //show directory space usage<br>
+free  //show memory and swap usage<br>
+passwd / to set/reset password<br><br>
+ls   ls -a   ls -l   ls -al   //to show content of files and directories<br>
+cat>hello.txt //to create a text file<br>
+cat hello.txt //to view content of file<br>
+cat>hello.txt //to rewrite into a file<br>
+cat>>hello.txt //to append the file<br>
+cat file1.txt file2.txt > file3.txt   //to add content of two files to single<br>
+ctrl +d //to save file content<br>
+touch //to create empty file<br>
+rm //to remove file or directory<br>
+cd     cd ..    //to change directory<br>
+grep pattern filename   //to search for a pattern in a file it's give a whole line <br>
+gedit   //to edit the file graphically<br>
+mkdir  //to create a directory<br>
+rmdir  //to del empty dir<br>
+rm -rf dirname  //to del dir w/c is not empty<br>
+cp     //cp source  destination      to copy a file<br>
+mv    //to move the file from one location to another<br>
+ps // currently working process<br>
+top // all running process<br>
+useradd    adduser    //to add new user<br>
+userdel      // to del user<br>
+redhat-config-network      //to open network configuration manager<br>
+ifconfig  //to check network details<br>
+ping id address<br>
+service network restart<br>
+more filename // view the content of the text file,<br>
+head filename  //first 10 lines<br>
+tail filename  //last 10 lines<br>
 
-<h6>Basic Command end Here </h6>
+<h6>Basic Command end Here </h6><br>
 
 #
-<h6>Add a New Group</h6>
+<h6>Add a New Group</h6><br>
 
-groupadd name_of_the group
-# Add an Existing User Account to a Group
-usermod -a -G examplegroup exampleusername
-# Change a User’s Primary Group
-usermod -g new_group_name user_name
-# View the Groups a User Account is Assigned To
-groups
-# To view the numerical IDs associated with each group, run the id  command instead:
-id
-# Create a New User and Assign a Group in One Command
-useradd -G examplegroup exampleusername
-=> You’ll want to assign a password for that user afterwards, of course:
-passwd exampleusername
-# Add a User to Multiple Groups
-usermod -a -G group1,group2,group3 user_name
-# View All Groups on the System
-getent group
+groupadd name_of_the group<br>
+# Add an Existing User Account to a Group<br>
+usermod -a -G examplegroup exampleusername<br>
+# Change a User’s Primary Group<br>
+usermod -g new_group_name user_name<br>
+# View the Groups a User Account is Assigned To groups<br>
+# To view the numerical IDs associated with each group, run the id  command instead:<br>
+id <br>
+# Create a New User and Assign a Group in One Command<br>
+useradd -G examplegroup exampleusername<br>
+=> You’ll want to assign a password for that user afterwards, of course:<br>
+passwd exampleusername<br>
+# Add a User to Multiple Groups<br>
+usermod -a -G group1,group2,group3 user_name<br>
+# View All Groups on the System<br>
+getent group<br>
 
-<h6>Add a New User</h6>
+<h6>Add a New User</h6><br>
 <p>
 When we run ‘useradd‘ command in Linux terminal, it performs following major things:
 1.It edits /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files for the newly created User account.
@@ -72,11 +71,11 @@ When we run ‘useradd‘ command in Linux terminal, it performs following major
 3.Sets permissions and ownerships to home directory.
 </p>
 
-# Add a User
-useradd username
+# Add a User<br>
+useradd username<br>
 
-# How to give a password to the user
-passwd username
+# How to give a password to the user<br>
+passwd username<br>
 <p> Once a new user created, it’s entry automatically added to the ‘/etc/passwd‘ file. The file is used to store users information and the entry should be.</p>
 The above entry contains a set of seven colon-separated fields, each field has it’s own meaning. Let’s see what are these fields:
 1.Username: User login name used to login into system. It should be between 1 to 32 charcters long.
@@ -87,54 +86,55 @@ The above entry contains a set of seven colon-separated fields, each field has i
 6.Home Directory: The absolute location of user’s home directory.
 7.Shell: The absolute location of a user’s shell i.e. /bin/bash.
 
-# . Create a User with Different Home Directory
-useradd -d /home/user1 arun
+# . Create a User with Different Home Directory<br>
+useradd -d /home/user1 arun<br>
 
-# You can see the user home directory and other user related information like user id, group id, shell and comments.
-cat etc/passwd | grep user1
+# You can see the user home directory and other user related information like user id, group id, shell and comments.<br>
+cat etc/passwd | grep user1<br><br>
 
-# Create a User with Specific User ID
- whenever we create a new user accounts in Linux, it assigns userid 500, 501, 502 and so on…
- useradd -u 952 username
+# Create a User with Specific User ID<br>
+ whenever we create a new user accounts in Linux, it assigns userid 500, 501, 502 and so on…<br>
+ useradd -u 952 username<br>
  
-# Create a User with Specific Group ID
-useradd -u 952 -g 152 username
+# Create a User with Specific Group ID<br>
+useradd -u 952 -g 152 username<br>
 
-# Add a User to Multiple Groups
-useradd -G admins,webadmins,developers username
+# Add a User to Multiple Groups<br>
+useradd -G admins,webadmins,developers username<br>
 Next, verify that the multiple groups assigned to the user with id command.
-id username
+id username<br>
 
-# Add a User without Home Directory
-useradd -M username
+# Add a User without Home Directory<br>
+useradd -M username<br>
 Now, let’s verify that the user is created without home directory, using ls command.
 nothing exist inide the home directory
 
-# Create a User with Password Expiry Date
- useradd  2023-03-14 -e user_name
+# Create a User with Password Expiry Date<br>
+ useradd  2023-03-14 -e user_name<br>
  
- <h6> Cat and Mount Command </h6>
+ <h6> Cat and Mount Command </h6><br>
 
-# cat command ussing for different purpose.
-cat > fileName	To create a file.
-cat oldfile > [newfile]	To copy content from older to new file.
-cat file1 file2 and so on > new file name	To concatenate contents of multiple files into one.
-cat -n/cat -b fileName	To display line numbers.
-cat -e fileName	To display $ character at the end of each line.
+# cat command ussing for different purpose.<br>
+cat > fileName	To create a file.<br>
+cat oldfile > [newfile]	To copy content from older to new file.<br>
+cat file1 file2 and so on > new file name	To concatenate contents of multiple files into one.<br>
+cat -n/cat -b fileName	To display line numbers.<br>
+cat -e fileName	To display $ character at the end of each line.<br>
 
-# The mount command attaches the filesystem of an external device to the filesystem of a system.
-fdisk -l // to check the sdb/filename
-now mkdir inside mnt or media using command 
-mkdir /mnt/usb-drive
-mount /sdb/filename /mnt/usb-drive
+# The mount command attaches the filesystem of an external device to the filesystem of a system.<br>
+fdisk -l // to check the sdb/filename<br>
+now mkdir inside mnt or media using command <br>
+mkdir /mnt/usb-drive<br>
+mount /sdb/filename /mnt/usb-drive<br>
 
-<h6> Linux Chown Command Examples to Change Owner and Group </h6>
-The concept of owner and groups for files is fundamental to Linux. Every file is associated with an owner and a group. You can use chown and chgrp commands to change the owner or the group of a particular file or directory.
+<h6> Linux Chown Command Examples to Change Owner and Group </h6><br>
+The concept of owner and groups for files is fundamental to Linux. Every file is associated with an owner and a group. You can use chown and chgrp commands to change the owner or the group of a particular file or directory.<br>
 
-firstly check the file owner  by using
-ls -l filename
-then ,
-chown new_user_name filename
+firstly check the file owner  by using<br>
+ls -l filename<br>
+then ,<br>
+chown new_user_name filename<br>
+
 
 
 
