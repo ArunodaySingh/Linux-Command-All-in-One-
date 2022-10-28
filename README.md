@@ -217,7 +217,7 @@ tee --help // to show all options<br>
  free => display information about free & used memory on the system.<br>
  df => report filesystem disk space usage<br>
  
- <h6> Tar command </h6><br>
+ <h6> Tar command (still some command left)</h6><br>
  
  It's used to compressed or decompressed file<br>
  -c compress<br>
@@ -228,7 +228,6 @@ tee --help // to show all options<br>
  tar -cvf Archieve_test.tar /home/utilizers<br>
  
  
- 
  <h6> Word Count </h6><br>
  wc file 2<br>
  4 6 29 file2<br>
@@ -236,6 +235,7 @@ tee --help // to show all options<br>
  6 no. of words<br>
  29 no. of char<br>
  
+ <h6>Umask command </h6><br>
  
  
 
