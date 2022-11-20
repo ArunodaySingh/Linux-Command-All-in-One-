@@ -236,6 +236,122 @@ tee --help // to show all options<br>
  29 no. of char<br>
  
  <h6>Umask command </h6><br>
+ The umask command in Linux is used to set default permissions for files or directories the user creates.<br>
+ The umask command specifies the permissions that the user does not want to be given out to the newly created file or directory.<br>
+ umask works by doing a Bitwise AND with the bitwise complement(where the bits are inverted, i.e. 1 becomes 0 and 0 becomes 1) of the umask.<br>
+ The bits which are set in the umask value, refer to the permissions, which are not assigned by default,<br>
+ as these values are subtracted from the maximum permission for files/directories.<br>
+ Here, the first digit, 0 is called the sticky bit, it is a special security feature.The next three digits represent the octal values of the umask for a file or  <br>
+ directory .(1st digit for user 2nd digit for group 3rd digit for other) (Now, for eg i give umask 0005 that's means for user give i give 0 and for other <br>
+ give 0 and for other i give 5 (futher convert into decimal 101 that's means 1 for read 0 for write 1 for execute).<br>
+ 
+ <h6>alias command in Linux with Examples</h6>
+ Alias is like a shortcut command which will have same functionality as if we are writing the whole command.<br>
+ alias name="command" <br>
+ unalias [alias name] <br>
+ -p option : This option prints all the defined aliases is reusable format.<br> 
+Syntax: <br>
+alias -p <br>
+
+ <h6> diff command in Linux with examples </h6> <br> 
+ 
+ diff stands for difference. This command is used to display the differences in the files by comparing the files line by line.<br>
+ Unlike its fellow members, cmp and comm, it tells us which lines in one file have is to be changed to make the two files identical.<br> 
+ Special symbols are: <br>
+ a : add <br>
+ c : change <br>
+ d : delete <br>
+ 
+ <h4> Scripting </h4> <br>
+ // Create a scripting file with .sh extension <br>
+ // write a code <br>
+ // chmod u+x filename <br>
+ // ./filename.sh <br>
+ Some Useful Symbol <br>
+ “   : double quote <br>
+ `   : back quote <br>
+Echo command is well appreciated when trying to debug scripts. <br>
+Syntax :  echo {options}  string <br>
+Options: -e : expand \ (back-slash ) special characters <br>
+		       -n : do not output a new-line at the end. <br>
+
+echo "Please enter three filenames:” <br>
+read  filea fileb filec  <br>
+ 
+Programming features of the UNIX/LINUX shell<br>
+Shell variables:  Your scripts often need to keep values in memory for later use.  Shell variables are symbolic names that can access values stored in memory<br>
+Operators:  Shell scripts support many operators, including those for performing mathematical operations<br>
+Logic structures:  Shell scripts support sequential logic (for performing a series of commands), decision logic (for branching from one point in a <br>
+script to another), < looping logic (for repeating a command several times), and case logic (for choosing an action from several possible alternatives) <br>
+
+ //Variable <br>
+ 
+Variables are symbolic names that represent values stored in memory <br>
+Three different types of variables <br>
+Global Variables: Environment and configuration variables, capitalized, such as HOME, PATH, SHELL, USERNAME, and PWD. <br>
+When you login, there will be a large number of global System variables that are already defined. These can be freely referenced and used in your shell scripts.<br> 
+Local Variables<br>
+Within a shell script, you can create as many new variables as needed. Any variable created in this manner remains in existence only within that shell.<br>
+Special Variables<br>
+Reversed for OS, shell programming, etc. such as positional parameters $0, $1 … <br>
+
+ 
+// Create array and list <br>
+To create lists (array) – round bracket <br>
+	$ set Y = (UNL 123 CS251) <br>
+To set a list element – square bracket <br>
+	$ set Y[2] = HUSKER <br>
+To view a list element:<br>
+	$ echo $Y[2] <br>
+Example: <br>
+			#!/bin/sh <br>
+			a=(1 2 3) <br>
+			echo ${a[*]} <br>
+			echo ${a[0]} <br>
+	Results:	1 2 3 <br>
+			1 <br>
+ 
+ // Positional Parameter <br>
+When a shell script is invoked with a set of command line parameters each of these parameters are copied into special variables.<br>
+ that can be accessed <br>
+$0 This variable that contains the name of the script <br>
+$1, $2, ….. $n 1st, 2nd 3rd command line parameter<br>
+$#  Number of command line parameters<br>
+$$  process ID of the shell<br>
+$@ same as $* but as a list one at a time (see for loops later )<br>
+ $?  Return code ‘exit code’ of the last command<br>
+Shift command: This shell command shifts the positional parameters by one towards the beginning and drops $1 from the list. After a shift $2 becomes $1 , and so on … It is a useful command for processing the input parameters one at a time.<br>
+
+Example: 
+    Invoke :  ./myscript  one two buckle my shoe<br>
+    During the execution of myscript variables $1 $2 $3 $4 and $5 will contain the values one, two, buckle, my, shoe   respectively.<br>
+
+ // Shell operator <br>
+  A shell variable take on the generalized form variable=value (except in the C shell).<br>
+		$ set x=37; echo $x <br>
+		37 <br>
+		$ unset x; echo $x <br>
+		x: Undefined variable.<br>
+  You can set a pathname or a command to a variable or substitute to set the variable.<br>
+		$ set mydir=`pwd`; echo $mydir<br>
+ 
+ // Arithemetic Operator <br>
+ vi math.sh <br>
+		#!/bin/sh<br>
+		count=5<br>
+		count=`expr $count + 1 `<br>
+	echo $count<br>
+chmod u+x math.sh<br>
+math.sh<br>
+
+ 
+ 
+
+ 
+ 
+
+
+
  
  
 
