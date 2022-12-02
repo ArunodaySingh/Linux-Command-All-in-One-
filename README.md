@@ -345,7 +345,23 @@ chmod u+x math.sh<br>
 math.sh<br>
 
  
+ // Apache is the most commonly used Web server on Linux systems <br>
  
+// FTP (stands for “File Transfer Protocol”) is a standard and old network protocol<br>
+// used for the transfer of files between a client and server on a computer network.<br>
+
+// A Samba file server enables file sharing across different operating systems over a network.<br>
+// It lets you access your desktop files from a laptop and share files with Windows and macOS users.<br>
+// This guide covers the installation and configuration of Samba on Ubuntu.<br>
+// Samba-client for cli and samba-swat for gui are used  <br>
+
+What is an advantage of SMB over FTP?<br>
+What is an advantage of SMB over FTP? ​ Only with SMB can data transfers occur in both directions.<br>
+Only SMB establishes two simultaneous connections with the client, making the data transfer faster.​<br> 
+SMB is more reliable than FTP because SMB uses TCP and FTP uses UDP.<br>
+
+// Network File System (NFS) NFS allows a system to share directories and files with others over a network. <br>
+// By using NFS, users and programs can access files on remote systems almost as if they were local files.<br>
 
  
  
